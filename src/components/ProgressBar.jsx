@@ -13,13 +13,12 @@ function ProgressBar() {
 
       {arr.map((element, elementIdx) => {
         return (
-          <div className='level-bar' key = {elementIdx}>{element}</div>
+          <div className='level-bar' key = {elementIdx}></div>
         )
       })}
-    </div>
-    <div className='xp' style={{width: `${40}% `}} >
-
-    </div>
+    
+       <div className='xp' style={{width: `${80}% `}} ></div>
+      </div>
     </>
    
   )
