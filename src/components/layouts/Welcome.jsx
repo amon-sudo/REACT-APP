@@ -11,7 +11,7 @@ function Welcome() {
             <div>
                 <input type='text' placeholder='enter your name...'/>
                 <button>
-                    <h6>Start &rr;</h6>
+                    <h6>Start &rarr;</h6>
                 </button>
             </div>
         </section>
