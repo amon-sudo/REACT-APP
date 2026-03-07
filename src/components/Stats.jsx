@@ -1,10 +1,10 @@
 import React from 'react'
-
+import ProgressBar from './ProgressBar'
 function Stats() {
 
 const name = "James"
 
-
+const day = 16
   return (
     <div className='card stats-card'>
       <div className='welcome-text'>
@@ -15,9 +15,19 @@ const name = "James"
       </div>
       <div className='stats-column'>
         <div>
-          <p>Streatk </p>
+          <p>Streak 🔥</p>
+          <h4>{day - 1}</h4>
+        </div>
+         <div>
+          <p>word seen</p>
+          <h4>{101}</h4>
+        </div>
+         <div>
+          <p>ccuracy %</p>
+          <h4>{93.3.toFixed(2)}</h4>
         </div>
       </div>
+      <ProgressBar />
     </div>
   )
 }
