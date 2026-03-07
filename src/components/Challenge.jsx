@@ -6,7 +6,7 @@ function Challenge() {
     const definiton = "in excellent order"
   return (
     <>
-    <section id='challlenge'>
+    <section id='challenge'>
         <h1>{word}</h1>
         <p>in excellen order</p>
         <div className='helper'>
