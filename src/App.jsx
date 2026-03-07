@@ -3,7 +3,12 @@ import Welcome from "./components/layouts/Welcome"
 import Dashboard from "./components/layouts/Dashboard"
 import Challenge from "./components/Challenge"
 function App(props) {
-
+  const selectedPage = 1  // 0 is for the welcome page, 1 is for the dashbaord and 2 is for the challenge page
+  const pages = {
+    0: <Welcome />,
+    1: <Dashboard />,
+    2: <Challenge />
+  }
 
   return (
     <>
@@ -12,10 +17,7 @@ function App(props) {
         
         
         <Layout>
-
-                <Welcome/>
-                <Dashboard />
-                <Challenge />
+          {pages[selectedPage]}
         </Layout>
  
         

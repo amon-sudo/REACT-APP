@@ -7,7 +7,7 @@ function Welcome() {
             <h3 className='text-large special-shadow'>
                 365 days.<br/> 365 words.
             </h3>
-            <h6>Build your lexicon. <br/> Start your challenge today</h6>
+            <h6>Build your lexicon. <br/> Start the challenge today</h6>
             <div>
                 <input type='text' placeholder='enter your name...'/>
                 <button>
