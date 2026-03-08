@@ -9,8 +9,19 @@ function App(props) {
 
   const [name, setName] = useState('')
   // const selectedPage = 2  // 0 is for the welcome page, 1 is for the dashbaord and 2 is for the challenge page
+
+      const handlePageChange = (pageIndex) => {
+        setName(pageIndex)
+    }
+    function handleCreateAccount (){
+        if(!name) return
+        localStorage.setItem('username', name)
+        handlePageChange(1)
+    }
   const pages = {
-    0: <Welcome username= "hello username" name ={name} setName={setName}/>,
+    0: <Welcome 
+    handleCreateAccount = {handleCreateAccount}
+    username= "hello username" name ={name} setName={setName}/>,
     1: <Dashboard />,
     2: <Challenge />
   }

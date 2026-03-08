@@ -2,7 +2,8 @@ import React from 'react'
 
 function Welcome(props) {
     console.log('PROPS', props)
-    const {name, setName} = props
+    const {name, setName, handleCreateAccount} = props
+
   return (
     <>
         <section id='welcome'>
@@ -16,7 +17,7 @@ function Welcome(props) {
                     setName(e.target.value)
                 }}
                 />
-                <button>
+                <button onClick={handleCreateAccount} disabled={!name}>
                     <h6>Start &rarr;</h6>
                 </button>
             </div>
