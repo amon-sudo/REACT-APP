@@ -4,8 +4,8 @@ import Dashboard from "./components/layouts/Dashboard"
 import Challenge from "./components/Challenge"
 import { useState, useEffect } from "react"
 import History from "./components/History"
-import WORDS from './utilities/VOCAB.json'
-import PLAN from'./utilities'
+import WORDS from './utils/VOCAB.json'
+import {getWordByIndex, PLAN} from'./utils'
 function App(props) {
   const [selectedPage, setSelectedPage] = useState(0)
 
@@ -17,8 +17,11 @@ function App(props) {
   const [history, setHistory] = useState([])
   const [attempts, setAttempts] = useState(0)
   
-console.log(PLAN)
-  const daysWord = PLAN 
+
+  const daysWords = PLAN [day].map((idx) => {
+    return getWordByIndex(WORDS, idx).word
+  })
+  console.log(daysWords)
 
    function handlePageChange (pageIndex){
         setSelectedPage(pageIndex)
