@@ -44,6 +44,7 @@ function App(props) {
     username= "hello username" name ={name} setName={setName}/>,
     1: <Dashboard name = {name} attempts={attempts} PLAN = {PLAN} day={day}
     handleChangePage={handlePageChange} dayswords={daysWords} datetime = {dateTime}
+    history={history}
     />,
     2: <Challenge />
   }
