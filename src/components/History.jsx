@@ -9,15 +9,24 @@ function History(props) {
                   { historyKeys.length == 0 ? (
                   <p>You have no attempts! Press <b>Start</b> to begin a challenge ⭐</p>) 
                   :
-                  (       <div className='history-list'>
-              <div className='card-button-secondary'>
+                  (       
+              <div className='history-list'>
+                {historyKeys.map((item, itemIdx) =>{
+                  const dateKey = (new Date(item)).toString().split(' ').slice(1, 4).join('')
+                  return (
+                    
+                    <div  key ={itemIdx}
+                    className='card-button-secondary'>
                   <p>Started</p>
-                  <h6>March 25 2026</h6>
+                  <h6>{dateKey}</h6>
                       <div>
                         <p>Streak</p>
-                        <h6>53</h6>
+                        <h6>{history[item]}</h6>
                       </div>
                </div>
+                  )
+                })}
+              
           
           </div>
           )}
