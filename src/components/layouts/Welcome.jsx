@@ -1,6 +1,8 @@
 import React from 'react'
 
-function Welcome() {
+function Welcome(props) {
+    console.log('PROPS', props)
+    const {name, setName} = props
   return (
     <>
         <section id='welcome'>
@@ -9,7 +11,11 @@ function Welcome() {
             </h3>
             <h6>Build your lexicon. <br/> Start the challenge today</h6>
             <div>
-                <input type='text' placeholder='enter your name...'/>
+                <input type='text' placeholder='enter your name...' value={name}
+                onChange={(e) =>{
+                    setName(e.target.value)
+                }}
+                />
                 <button>
                     <h6>Start &rarr;</h6>
                 </button>
