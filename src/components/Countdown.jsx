@@ -9,7 +9,7 @@ function Countdown(props) {
   const [remainingMs, setRemainingMs] = useState(countdownIn24Hours(targetMillies))
   const timer = convertMilliseconds(remainingMs)
 
-  console.log(timer)
+
   return (
     <>
          <div className='card countdown-card'>
@@ -17,14 +17,14 @@ function Countdown(props) {
           <div className='today-container'>
             <div>
               <p>Time remaining</p>
-              <h3>13H 45MIN 225S</h3>
+              <h3>{datetime ? `${Math.abs(timer.hours)}H ${Math.abs(timer.minutes)}M ${Math.abs(timer.seconds)}S` :"24H 59M 59S" }</h3>
             </div>
             <div>
               <p>Words for Today</p>
-              <h3>16</h3>
+              <h3>{dayswords.lengtn}</h3>
             </div>
           </div>
-          <button className='start-task'>
+          <button className='start-task' onClick={() =>{handleChangePage(2)}}>
             <h6>Sart</h6>
           </button>
          </div>
