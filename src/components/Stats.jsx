@@ -1,8 +1,7 @@
 import React from 'react'
 import ProgressBar from './ProgressBar'
-function Stats() {
-
-const name = "James"
+function Stats(props) {
+const {name} = props
 
 const day = 16
   return (

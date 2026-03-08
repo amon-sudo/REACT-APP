@@ -1,7 +1,6 @@
 import React from 'react'
 
 function Welcome(props) {
-    console.log('PROPS', props)
     const {name, setName, handleCreateAccount} = props
 
   return (

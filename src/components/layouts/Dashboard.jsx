@@ -2,12 +2,13 @@ import React from 'react'
 import Stats from '../Stats'
 import Countdown from '../Countdown'
 import History from '../History'
-function Dashboard() {
+function Dashboard(props) {
+
   return (
 
     <>
         <section id='dashboard'>
-            <Stats />
+            <Stats {...props} />
             <Countdown />
             <History />
         </section>
