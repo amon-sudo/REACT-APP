@@ -9,7 +9,7 @@ function Dashboard(props) {
     <>
         <section id='dashboard'>
             <Stats {...props} />
-            <Countdown />
+            <Countdown {...props}/>
             <History />
         </section>
     </>

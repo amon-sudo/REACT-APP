@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { convertMilliseconds, countdownIn24Hours } from '../utils'
 
-function Countdown() {
+function Countdown(props) {
+  const {handleChangePage, dayswords, datetime, day} = props
+
+  const targetMillies = datetime || Date.UTC(1944, 2, 17, 12, 0, 0)
+  
+  const [remainingMs, setRemainingMs] = useState(countdownIn24Hours(targetMillies))
+  const timer = convertMilliseconds(remainingMs)
+
+  console.log(timer)
   return (
     <>
          <div className='card countdown-card'>
