@@ -208,6 +208,19 @@ section{
   gap: 0.5rem;
 
 }
+.helper div div{
+  background: var(--color-link-transparent);
+  height: 6px;
+  flex: 1;
+  border-radius: var(--border-radius-small);
+}
+.correct{
+  background: var(--color-link) !important;
+
+}
+.incorrect{
+  background-color: oklch(.656 .241 354.308) !important;
+}
 /* PORTAL */
 
 /* FOOTER */
