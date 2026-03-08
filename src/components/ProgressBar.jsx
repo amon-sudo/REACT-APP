@@ -1,7 +1,7 @@
 import React from 'react'
 
-function ProgressBar() {
-  const text = "hello my guy"
+function ProgressBar(props) {
+  const {text, reminder } = props
 
   const arr = [0,1,2,3,4,5,6,7,8,9]
   return (
@@ -17,7 +17,7 @@ function ProgressBar() {
         )
       })}
     
-       <div className='xp' style={{width: `${80}% `}} ></div>
+       <div className='xp' style={{width: ` ${reminder}% `}} ></div>
       </div>
     </>
    

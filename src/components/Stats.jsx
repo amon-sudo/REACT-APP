@@ -1,9 +1,12 @@
 import React from 'react'
 import ProgressBar from './ProgressBar'
+import { calcLevel, calculateAccuracy, calculateNewWords } from '../utils'
 function Stats(props) {
-const {name} = props
+const {name, day, attempts, PLAN} = props
 
-const day = 16
+const currlev = calcLevel(day)
+const flooredlvl = Math.floor(currlev)
+const reminder = (currlev - flooredlvl) * 100
   return (
     <div className='card stats-card'>
       <div className='welcome-text'>
@@ -19,14 +22,14 @@ const day = 16
         </div>
          <div>
           <p>word seen</p>
-          <h4>{101}</h4>
+          <h4>{calculateNewWords(day - 1)}</h4>
         </div>
          <div>
           <p>ccuracy %</p>
-          <h4>{93.3.toFixed(2)}</h4>
+          <h4>{(calculateAccuracy(attempts, day)).toFixed(1) * 100}</h4>
         </div>
       </div>
-      <ProgressBar />
+      <ProgressBar text={`lvl  ${flooredlvl}`}  reminder={reminder}/>
     </div>
   )
 }
